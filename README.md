@@ -116,7 +116,7 @@ if (isAuthenticated.value && cart.value && cart.value.customerId) {
     await loadStoredPaymentInstruments(cart.value.customerId);
 }
 ```
-4. Run `loadAvailableMethods` - first argument is cartId (access it via `cart.value.id`) - second for authenticated customer is an email (access it via `user.value.email`) - third for products, you can modify order product items. Then it will return `interface { id, apms: Array<any> }` and set `apms` inside `availableMethods`. E.g:
+4. Run `loadAvailableMethods` - first argument is cartId (access it via `cart.value.id`) - second for authenticated customer is an email (access it via `user.value.email`) - third for products, you can modify order products items. Then it will return `interface { id, apms: Array<any> }` and set `apms` inside `availableMethods`. E.g:
 ```js
 onMounted(async () => {
     await loadAvailableMethods(cart.value.id, user.value && user.value.email);
