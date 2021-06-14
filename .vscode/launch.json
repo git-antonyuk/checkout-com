@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "client: chrome",
+      "url": "https://www.lovecrafts.com.dev.lovecrafts.cool/en-gb/checkout-v2/",
+      "webRoot": "${workspaceFolder}",
+      "skipFiles": [
+        "<node_internals>/**", 
+        "ssl.gstatic.com/**", 
+        "cdn.segment.com/*"
+      ],
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach to remote",
+      "address": "dev.lovecrafts.cool",
+      "port": 9229
+    }
+  ],
+  "compounds": [
+    {
+      "name": "fullstack: nuxt",
+      "configurations": ["server: nuxt", "client: chrome"]
+    }
+  ]
+}

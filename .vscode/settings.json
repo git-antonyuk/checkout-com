@@ -1,0 +1,15 @@
+{
+  "saveAndRun": {
+    "commands": [
+      {
+        "match": ".*",
+        "cmd": "sh ~/loveCrafts/rebuild-vsf-cko.sh ${relativeFile}",
+        "useShortcut": false,
+        "silent": false
+      }
+    ]
+  },
+  "cSpell.words": [
+    "magento"
+  ]
+}
